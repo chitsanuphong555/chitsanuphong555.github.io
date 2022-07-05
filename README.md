@@ -145,7 +145,7 @@ console.log(productId)
 
 ```
 
-## การสร้างหน้า Page Not Foung ของ NEXTJS
+## การสร้างหน้า Page Not Found ของ NEXTJS
 
 - ให้เราสร้างไฟล์ 404.js ขึ้นมาใน level เดียวกับ \_app.js ขึ้นมา
   ![Routing Page](/public/routing_page.png)
