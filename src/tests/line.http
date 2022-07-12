@@ -1,0 +1,7 @@
+@url= https://notify-api.line.me/api/notify
+
+POST {{url}}
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer 0Sm31a2dg4ldVr0w2llNT4aBVGKmldmsVw59QK0UGnd
+
+message=hello kie
