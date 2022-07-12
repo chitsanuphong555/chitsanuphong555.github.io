@@ -9,16 +9,3 @@ jobs:
         with:
           access_token: 0Sm31a2dg4ldVr0w2llNT4aBVGKmldmsVw59QK0UGnd
           message: KIE ส่งงานเรียบร้อยแล้ว
-
-
-name: GitHub Actions Demo
-on: [push]
-jobs:
-  Explore-GitHub-Actions: # ! ชื่อ job
-    runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    steps:
-      - run: echo "🎉 Hello Benz"
-      - uses: snow-actions/line-notify@v1.0.0
-        with:
-          access_token: GEHEZ6buWWwI0IuGSmnRKtyMHkntHd9dhVIal9QG0OY
-          message: Benz ส่งงานแล้ว
