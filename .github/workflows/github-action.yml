@@ -5,3 +5,5 @@ jobs:
     runs-on: ubuntu-latest # * ชื่อ os ที่ใช้งาน
     steps:
       - run: echo "🎉 Hello KIE"
+      - run: curl -X POST -H 'Authorization: Bearer 0Sm31a2dg4ldVr0w2llNT4aBVGKmldmsVw59QK0UGnd' -F 'message=KIE อัพงานเรียบร้อยแย้ววววว' \
+https://notify-api.line.me/api/notify
