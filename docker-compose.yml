@@ -1,0 +1,16 @@
+version: "2"
+services:
+  mysql:
+    # network_mode: myNetwork #
+    container_name: kie_mysql
+    restart: always # * ทุกครั้งที่ mysql มีปํญหาให้ restart docker ทุกครั้ง
+    image: mysql:latest # * คล้ายๆ กับ lib แต่มันคือ image ที่ต้องการ
+    environment:
+      # MYSQL_USER: 'root'
+      # MYSQL_PASS: ''
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data:/var/lib/mysql
