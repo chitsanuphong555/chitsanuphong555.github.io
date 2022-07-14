@@ -1,2 +1,3 @@
-INSERT INTO products (id,name,price)
-VALUES (2, 'ถัง', 10)
+
+INSERT INTO customers (id,name,age)
+VALUES (2, 'หญิง', 26)

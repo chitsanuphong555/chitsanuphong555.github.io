@@ -1,4 +1,4 @@
 UPDATE products SET
-    name="ขัน",
-    price=5
+    name="แปรง",
+    price=55
 WHERE id=2

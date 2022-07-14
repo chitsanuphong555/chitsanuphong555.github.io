@@ -126,23 +126,31 @@ SELECT products.* FROM products WHERE price BETWEEN 20 AND 200
 
 ```sql
 หาสินค้าที่มีราคาระหว่าง 20 ถึง 200
-SELECT product.* WHEN price > 200 THEN 'Yes' ELSE 'No' END AS expensive FROM products
+SELECT products.*, CASE WHEN products.price > 200 THEN 'Yes' ELSE 'No' END AS expensive FROM products
 ```
 
 2.การสร้างตาราง
 
 ```sql
-CREATE TABLE Products(
-    id int PRIMARY 'Primary Key',
-    name TEXT,
-    price INTEGER
-) DEFAULT CHARSET UTF8 COMMENT 'newTable';
+CREATE TABLE CUSTOMERS(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   AGE  INT              NOT NULL,
+   ADDRESS  CHAR (25) ,
+   SALARY   DECIMAL (18, 2),
+   PRIMARY KEY (ID)
+);
 ```
 
 3.การเพิ่มชื่อ header ในตาราง (ใช้ AS ตามด้วยชื่อ header)
 
 ```sql
 SELECT products.*, products.price * 0.07 AS VAT FROM products
+```
+
+```sql
+หาสินค้าที่มีราคาระหว่าง 20 ถึง 200
+SELECT products.*, CASE WHEN products.price > 200 THEN 'Yes' ELSE 'No' END AS expensive FROM products
 ```
 
 4.การเพิ่มข้อมูลในตาราง
