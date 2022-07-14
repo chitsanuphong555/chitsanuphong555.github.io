@@ -231,7 +231,7 @@ jobs:
       - run: echo "🎉 Hello KIE"
       - uses: snow-actions/line-notify@v1.0.0 # * ชื่อ lib ของ Line for Github Action
         with: # * ตัวแปรที่ส่งไป
-          access_token: 0Sm31a2dg4ldVr0w2llNT4aBVGKmldmsVw59QK0UGnd
+          access_token: <Line Token>
           message: 🎉KIE ส่งงานเรียบร้อยแล้ว🎉
 ```
 
