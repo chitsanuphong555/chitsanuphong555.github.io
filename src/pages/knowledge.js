@@ -11,7 +11,6 @@ function Homepage() {
   const getTodo = async () => {
     let tmpdata = await finalFetchTodo();
     setDataPost(tmpdata);
-    // console.log(tmpdata)
   };
   return (
     <>
