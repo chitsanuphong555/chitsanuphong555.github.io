@@ -252,7 +252,7 @@ jobs:
       - run: echo "🎉 Hello KIE"
       - uses: snow-actions/line-notify@v1.0.0 # * ชื่อ lib ของ Line for Github Action
         with: # * ตัวแปรที่ส่งไป
-          access_token: 0Sm31a2dg4ldVr0w2llNT4aBVGKmldmsVw59QK0UGnd
+          access_token: <Line Token>
           message: เตรียมวัตถุดิบ หั่นต้นหอม ล้างหมู หั่นหมู
 
   Second-Job: # * ชื่อ job
@@ -262,7 +262,7 @@ jobs:
       # - run: echo "🎉 Hello KIE"
       - uses: snow-actions/line-notify@v1.0.0 # * ชื่อ lib ของ Line for Github Action
         with: # * ตัวแปรที่ส่งไป
-          access_token: 0Sm31a2dg4ldVr0w2llNT4aBVGKmldmsVw59QK0UGnd
+          access_token: <Line Token>
           message: ตั้งไฟ ใส่น้ำมัน ทอดกระเทียมให้หอม
 
   Third-Job: # * ชื่อ job
@@ -271,7 +271,7 @@ jobs:
     steps:
       - uses: snow-actions/line-notify@v1.0.0 # * ชื่อ lib ของ Line for Github Action
         with: # * ตัวแปรที่ส่งไป
-          access_token: 0Sm31a2dg4ldVr0w2llNT4aBVGKmldmsVw59QK0UGnd
+          access_token: <Line Token>
           message: ผัดหมูให้สุกใส่ข้าวลงไปผัด ใส่เครื่องปรุง
 
   Fourth-Job: # * ชื่อ job
@@ -280,7 +280,7 @@ jobs:
     steps:
       - uses: snow-actions/line-notify@v1.0.0 # * ชื่อ lib ของ Line for Github Action
         with: # * ตัวแปรที่ส่งไป
-          access_token: 0Sm31a2dg4ldVr0w2llNT4aBVGKmldmsVw59QK0UGnd
+          access_token: <Line Token>
           message: ใส่ผัก แล้วตักใส่จาน
 
   Fifth-Job: # * ชื่อ job
@@ -289,7 +289,7 @@ jobs:
     steps:
       - uses: snow-actions/line-notify@v1.0.0 # * ชื่อ lib ของ Line for Github Action
         with: # * ตัวแปรที่ส่งไป
-          access_token: 0Sm31a2dg4ldVr0w2llNT4aBVGKmldmsVw59QK0UGnd
+          access_token: <Line Token>
           message: ตักใส่ปาก
 ```
 
