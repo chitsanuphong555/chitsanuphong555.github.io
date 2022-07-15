@@ -178,3 +178,5 @@ WHERE id=2
 ```sql
 DELETE FROM products WHERE id=2
 ```
+
+## คำสั่งพื้นฐานที่ใช้บ่อย
