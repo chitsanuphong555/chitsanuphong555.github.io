@@ -40,22 +40,10 @@ function App() {
     <Router>
       <div className="App">
         <div id="homepage-main">
-          {/* <StarBackground /> */}
+          <StarBackground />
           <Navbar />
           <div className="relative flex items-center justify-center">
-            {/* {dataPost.map((item, index) => {
-              return (
-                <div
-                  className={
-                    index % 2 === 0
-                      ? "border-gray-300 border-2 flex flex-row bg-gray-500 h-[20vh]"
-                      : "border-gray-300 border-2 flex flex-row bg-amber-100 h-[20vh]"
-                  }
-                >
-                  <span className="text-orange-500 ">{item.title}</span>
-                </div>
-              );
-            })} */}
+            
           </div>
         </div>
         <Routes>
