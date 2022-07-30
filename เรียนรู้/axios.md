@@ -75,6 +75,103 @@ axios({
 });
 ```
 
+หรือ เราสามารถประยุกต์ใช้ให้ทำการแนบค่าที่เป็น Authorization หรือ Token ที่อยู่ใน cookie ก็ได้อีกด้วย
+ยกตัวอย่างให้เรา สร้าง function กลางขึ้นมา 1 ตัว ให้ชื่อไฟล์ `MainApi.tsx`
+
+```js
+import axios from "axios";
+
+function MainApi(
+  methods: any,
+  namePath: any,
+  parameterData: any,
+  headers: any
+): Promise<unknown> {
+  return new Promise((resolve, reject) => {
+    axios({
+      method: methods,
+      url: namePath,
+      headers: headers,
+      data: parameterData,
+    })
+      .then((response) => {
+        resolve(response);
+      })
+      .catch(async (error) => {
+        reject(error);
+      });
+  });
+}
+
+export default MainApi;
+```
+
+แล้วทำ function กลางขึ้นมา เพื่อนำ access token ที่ได้มาแนบไปกับ api อื่นๆ ให้ไฟล์ชื่อว่า GlobalAccessAPI.js
+
+[getCookie] ตัวนี้เราจะใช้ lib ตัวอื่นมาประยุกต์ใช้ก็ได้
+
+```js
+import { getCookie } from "../checkToken/CookieGlobal";
+import MainApi from "../checkToken/MainAPI";
+
+function GlobalAccessAPI(methods, namePath, parameterData) {
+  if (getCookie("access_token_system") !== null) {
+    let objectHeader = {
+      AuthorizationAccessToken: {
+        Authorization: `Bearer ${getCookie("access_token_system")}`,
+        "Authorization-Access-OneID": `${getCookie(
+          "access_token__one_id_system"
+        )}`,
+        "Authorization-Refresh-OneID": `${getCookie(
+          "refresh_token__one_id_system"
+        )}`,
+      },
+    };
+    return new Promise((resolve, reject) => {
+      MainApi(
+        methods,
+        namePath,
+        parameterData,
+        objectHeader.AuthorizationAccessToken
+      )
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+          if (
+            err.response?.status === 401 ||
+            err?.response?.data?.message === "invalid or expired jwt"
+          ) {
+          }
+        });
+    });
+  } else {
+  }
+}
+
+export default GlobalAccessAPI;
+```
+
+วิธีการนำไปใช้ ในส่วนต่อไปนี้เราจะให้แนบ Token ที่เก็บอยู่ใน cookie เพื่อไป get ข้อมูล โดยเงื่อนไข api นี้ต้องมี access token นี้เท่านั้นถึงจะ get ข้อมูลจากระบบนี้ได้ ตัวอย่างเช่น
+
+```js
+import GlobalAccessAPI from "../configs/globalToken/GlobalAccessAPI";
+
+const fetchProductData = () => {
+  GlobalAccessAPI("get", DATA_ALLPRODUCT, {})
+    .then((res) => {
+      setDataAllProduct(res.data.data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      setLoading(false);
+    });
+};
+```
+
+เราก็จะได้ข้อมูลของสินค้ามา
+
 การใช้ตัวเลือกการกำหนดค่า validateStatus คุณสามารถกำหนดรหัส HTTP ที่ควรแสดงข้อผิดพลาด
 
 ```js
