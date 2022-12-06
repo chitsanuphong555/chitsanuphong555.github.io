@@ -7,7 +7,7 @@ export async function finalFetchTodo() {
     if (item.title.indexOf("autem") > -1 || item.title.indexOf("minus") > -1) {
       return <p className="text-red-500">{item.title}</p>;
     } else {
-      return <p className="text-blue-500">{item.title}</p>;
+      return <p className="text-blue-500">{item.title} test</p>;
     }
   });
 
