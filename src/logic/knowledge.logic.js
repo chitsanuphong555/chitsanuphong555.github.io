@@ -1,4 +1,4 @@
-import { fetchTodo } from "./../api/todo.api";
+import { fetchTodo } from "../api/todo.api";
 
 export async function finalFetchTodo() {
   let data = await fetchTodo();

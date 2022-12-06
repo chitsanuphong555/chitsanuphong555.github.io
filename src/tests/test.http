@@ -1,2 +1,14 @@
-@url= https://jsonplaceholder.typicode.com/todos/1
+@url = https://jsonplaceholder.typicode.com/todos/1
+
 GET {{url}}
+
+###
+@name= "Hola"
+@job= "programmer"
+POST https://reqres.in/api/users
+Content-Type: application/json
+
+{
+    "name": {{name}},
+    "job": {{job}}
+}

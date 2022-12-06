@@ -14,7 +14,7 @@ function Homepage() {
   }
   return (
     <div className="relative flex items-center justify-center">
-      <select name="" id="">
+      {/* <select name="" id="">
         <option value="1" disabled hidden>เลือกข้อมูล</option>
         {dataPost.map((item, index) => {
           return (
@@ -23,7 +23,7 @@ function Homepage() {
             </option>
           );
         })}
-      </select>
+      </select> */}
     </div>
   );
 }
