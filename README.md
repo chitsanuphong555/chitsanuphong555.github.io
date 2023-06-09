@@ -4,4 +4,4 @@
 - 🌱 I developed reactjs, nextjs, redux, typescript, wordpress, tailwind
 - 🌱 Lasted, I leaning Go lang
 
-[Link](https://chitsanuphong555.github.io/เรียนรู้)
+[Link](https://chitsanuphong555.github.io/learning)
