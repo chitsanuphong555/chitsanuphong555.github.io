@@ -2,7 +2,7 @@
   "name": "myportfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://chitsanuphong555.github.io/เรียนรู้",
+  "homepage": "https://chitsanuphong555.github.io/build",
   "dependencies": {
     "@headlessui/react": "^1.6.5",
     "@heroicons/react": "^1.0.6",
