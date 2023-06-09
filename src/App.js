@@ -43,7 +43,6 @@ function App() {
           <StarBackground />
           <Navbar />
           <div className="relative flex items-center justify-center">
-            
           </div>
         </div>
         <Routes>

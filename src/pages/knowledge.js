@@ -17,6 +17,7 @@ function Homepage() {
       {dataPost.map((item, index) => {
         return (
           <div
+          key={item.id}
             className={
               index % 2 === 0
                 ? "border-gray-300 border-2 flex flex-row bg-gray-500 h-[20vh]"
