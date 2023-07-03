@@ -1,7 +1,18 @@
-- 👋 Hi, I’m Chitsanuphong Ruangphaisan
-- 👀 I’m interested in Frontend Developer
-- 🌱 I’m currently learning ReactJS, Redux, Typescript, Cycress
-- 🌱 I developed reactjs, nextjs, redux, typescript, wordpress, tailwind
-- 🌱 Lasted, I leaning Go lang
-
-[Link](https://chitsanuphong555.github.io/learning)
+                         _oo0oo_
+                       o8888888o
+                       88" . "88
+                       (| -_- |)
+                       0\  =  /0
+                     ___/`---'\___
+                   .' \|     |// '.
+                  / \|||  :  |||// \
+                 / _||||| -:- |||||- \
+                |   | \\  -  /// |   |
+                | \_|  ''\---/''  |_/ |
+                \  .-\__  '-'  ___/-. /
+              ___'. .'  /--.--\  `. .'___
+           ."" '<  `.___\_<|>_/___.' >' "".
+          | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+          \  \ `_.   \_ __\ /__ _/   .-` /  /
+      =====`-.____`.___ \_____/___.-`___.-'=====
+                        `=---='
